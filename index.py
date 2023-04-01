@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import getpass
 import json
 import os
@@ -7,11 +7,6 @@ import psutil
 import requests
 
 app = Flask(__name__)
-
-def return_ip_info():
-    response = requests.get(f"https://api.ipify.org?format=json")
-    json_data = json.loads(response.text)
-    return search_ip(json_data['ip'])
 
 def search_ip(ip):
     response = requests.get(f"http://ip-api.com/json/{ip}")
@@ -29,7 +24,7 @@ def info(result):
 
 @app.route('/')
 def index():  # put application's code here
-    info(return_ip_info())
+    info(search_ip(request.remote_addr))
     return render_template('index.html')
 
 
