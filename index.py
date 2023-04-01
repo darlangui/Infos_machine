@@ -34,7 +34,7 @@ def get_resolution():
 
 @app.route('/')
 def index():  # put application's code here
-    '''info(search_ip(request.remote_addr))'''
+    info(search_ip(request.remote_addr))
     print('\n\n------------------------------------------------\n\n')
     print(request.headers.get('User-Agent'))
     print('\n\n------------------------------------------------\n\n')
