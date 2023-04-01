@@ -4,8 +4,26 @@
     <meta charset="UTF-8">
     <title>TT</title>
     <link rel="stylesheet" href="../static/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
+     <script>
+        var width = window.screen.width;
+        var height = window.screen.height;
+
+        $.ajax({
+            url: "/get_resolution",
+            data: {width: width, height: height},
+            dataType: 'json',
+            type: 'POST',
+            success: function(response) {
+                console.log(response);
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+    </script>
     <div class="loader">
         <div class="cube one"></div>
         <div class="cube two"></div>
