@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #282828;
+}
+
+.loader {
+    --cube-size: 52px;
+    --cube-spacing: 1px;
+    --cubes: 3;
+    --total-size: calc(var(--cubes) * (var(--cube-size) + 2 * var(--cube-spacing)));
+    display: flex;
+    flex-wrap: wrap;
+    width: var(--total-size);
+    height: var(--total-size);
+}
+
+.cube {
+    flex: 0 0 var(--cube-size);
+    margin: var(--cube-spacing);
+    background-color: transparent;
+    box-sizing: border-box;
+    border-radius: 4px;
+    animation: 1.5s ripple ease infinite;
+}
+
+.cube.one{
+    animation-delay: 100ms;
+}
+
+.cube.two{
+    animation-delay: 200ms;
+}
+
+.cube.three{
+    animation-delay: 300ms;
+}
+
+.cube.four{
+    animation-delay: 400ms;
+}
+
+.cube:nth-child(1){
+    --cube-color: #001f21;
+}
+
+.cube:nth-child(2){
+    --cube-color: #029b99;
+}
+
+.cube:nth-child(3){
+    --cube-color: #ebe7b7;
+}
+
+.cube:nth-child(4){
+    --cube-color: #de4f15;
+}
+
+.cube:nth-child(5){
+    --cube-color: #ecc039;
+}
+
+.cube:nth-child(6){
+    --cube-color: #3DF5D4;
+}
+
+.cube:nth-child(7){
+    --cube-color: #823772;
+}
+
+.cube:nth-child(8){
+    --cube-color: #3f261c;
+}
+
+.cube:nth-child(9){
+    --cube-color: #fffeea;
+}
+
+@keyframes ripple {
+    0% {
+        background-color: transparent;
+    }
+
+    30% {
+        background-color: var(--cube-color);
+    }
+
+    60% {
+        background-color: transparent;
+    }
+
+    100% {
+        background-color: transparent;
+    }
+}
