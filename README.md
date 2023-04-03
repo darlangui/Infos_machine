@@ -1,1 +1,1 @@
-# Aplicação Flask para obter dados e informações do Usuário!
+# Aplicação Flask para obter dados e informações do Usuário
