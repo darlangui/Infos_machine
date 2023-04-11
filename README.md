@@ -4,7 +4,7 @@
 
 ## Descrição 
 
-Esse projeto teve como objetivos compreender e criar uma aplicação simples em Python utilizando o framework back end Flask, basicamente pegando algumas informações do usuário que se conecta com a aplicação. Como o IP e header que é enviado pelo navegador.
+Esse projeto teve como objetivos compreender e criar uma aplicação simples em Python utilizando o framework back end Flask, basicamente pegando algumas informações do usuário que se conecta com a aplicação. Como o IP e header que é enviado pelo navegador, basicamente tentando compreender como é o funcionamento de requisições GET e os pacotes que interagem com essa requisição definindo um reposta especifica para cada dispositivo que se conecta com a aplicação.
 
 ## 🛠️ Abrir e rodar o projeto
 ### Instalação
